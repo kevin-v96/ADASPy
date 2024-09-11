@@ -6,6 +6,12 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dspy-ai>=2.4.14",
+    "weaviate-client>=4.8.0",
+    "openai>=1.44.1",
+    "ollama>=0.3.3",
+    "ipykernel>=6.29.5",
+    "python-dotenv>=1.0.1",
+    "gradio>=4.44.0",
 ]
 
 [build-system]
