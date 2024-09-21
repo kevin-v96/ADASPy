@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends, Body
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
-from .models import User, SignupRequest, LoginRequest
-from .database import get_db
-from .dependencies import create_access_token
+from adaspy.backend.models import User, SignupRequest, LoginRequest
+from adaspy.backend.database import get_db
+from adaspy.backend.dependencies import create_access_token
 from datetime import timedelta
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])

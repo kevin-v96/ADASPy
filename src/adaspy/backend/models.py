@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, JSON, Boolean
 from sqlalchemy.orm import relationship
-from .database import Base
+from adaspy.backend.database import Base
 from pydantic import BaseModel
 
 

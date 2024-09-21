@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from .models import AgenticSystem, User, Team, Membership
-from .database import get_db
-from .dependencies import get_current_user
+from adaspy.backend.models import AgenticSystem, User, Team, Membership
+from adaspy.backend.database import get_db
+from adaspy.backend.dependencies import get_current_user
 
 router = APIRouter()
 
@@ -27,6 +27,8 @@ def create_agent(name: str, description: str, code: str, metrics: dict,
         user_id=current_user.id if current_user else None,
         team_id=team_id
     )
+
+    #add agent calling here
 
     db.add(new_agent)
     db.commit()

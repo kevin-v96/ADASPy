@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from .models import User, Team, Membership
-from .database import get_db
-from .dependencies import get_current_user  # Import the dependency to get the current user
+from adaspy.backend.models import User, Team, Membership
+from adaspy.backend.database import get_db
+from adaspy.backend.dependencies import get_current_user  # Import the dependency to get the current user
 
 router = APIRouter(prefix="/teams")
 

@@ -3,8 +3,8 @@ from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
-from .models import User
-from .database import get_db
+from adaspy.backend.models import User
+from adaspy.backend.database import get_db
 from fastapi.security import OAuth2PasswordBearer
 
 SECRET_KEY = "b0892f31c732d748d610192c07e6e6370dbd7830c2ec36df0501a67feeeaef6a"
